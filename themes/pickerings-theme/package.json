@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "^6.2.1",
+    "bootstrap": "^5.2.2",
+    "build": "^0.1.4",
+    "hamburgers": "^1.2.1",
+    "jquery": "^3.6.1",
+    "node-sass": "^8.0.0",
+    "swiper": "^8.4.5"
+  },
+  "scripts": {
+    "build": "node-sass style.scss style.css",
+    "watch": "node-sass --watch style.scss style.css --style compressed"
+  }
+}

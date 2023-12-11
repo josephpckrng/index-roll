@@ -1,0 +1,1 @@
+<div class="content-division" style="margin: <?= get_sub_field('division_size')?>rem 0"></div>
