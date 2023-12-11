@@ -153,7 +153,7 @@ images.forEach(image => {
     var tween3 = TweenMax.to("#target2", 0.5, { css: { left: "0", opacity: "1" }, ease: Linear.easeNone });
     var tween4 = TweenMax.to("#target1", 0.5, { css: { right: "0", opacity: "1" }, ease: Linear.easeNone });
     var tween5 = TweenMax.to("#target5", 0.5, { css: { top: "0", opacity: "1", filter: "saturate(1)" }, ease: Linear.easeNone });
-    var tween6 = TweenMax.to("#target6", 0.5, { css: { maxHeight: "400px" }, ease: Linear.easeNone });
+    var tween6 = TweenMax.to("#target6", 0.5, { css: { maxHeight: "600px" }, ease: Linear.easeNone });
     // build scene
     var scene = new ScrollMagic.Scene({ triggerElement: "#trigger", duration: 150, offset: 200 })
         .setTween(tween)

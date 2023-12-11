@@ -98,8 +98,8 @@
                             style="width: 100%">
                     </div>
                 </div>
-                <div class="col-lg-8">
-                    <h2 style="text-transform: uppercase; left: -200px; z-index: -1;" class="about-me-text">A Bit About
+                <div class="col-lg-8 fade-in">
+                    <h2 style="left: -200px; z-index: -1;" class="about-me-text">A Bit About
                         Me</h2>
                     <p class="about-me-text" id="point4">I'm a dedicated
                         web developer based in Manchester, UK, with a strong focus on front-end development, PHP, and
@@ -117,34 +117,34 @@
 
     <section class="gallery container" style="padding: 50px 0">
     <div class="text-only-container">
-            <h2>Lipsum</h2>
+            <h2>Projects</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
         <div class="row">
             <div class="col-lg-4 img-in">
                 <div class="pad-wrap">
                     <div class="imarg">
-                        <h4>Project 1</h4>
+                        <h4>Arvia Technology</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/IMG_4558-scaled.jpeg"
+                    <img src="http://personal.local/wp-content/uploads/2023/12/arvia.png"
                         style="width: 100%">
                 </div>
             </div>
             <div class="col-lg-4 img-in">
                 <div class="pad-wrap">
                     <div class="imarg">
-                        <h4>Project 2</h4>
+                        <h4>AI UK 2023</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/IMG_4558-scaled.jpeg"
+                    <img src="http://personal.local/wp-content/uploads/2023/12/aiuk232.png"
                         style="width: 100%">
                 </div>
             </div>
             <div class="col-lg-4 img-in">
                 <div class="pad-wrap">
                     <div class="imarg">
-                        <h4>Project 3</h4>
+                        <h4>Analogue Revival</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/IMG_4558-scaled.jpeg"
+                    <img src="http://personal.local/wp-content/uploads/2023/12/analiogg.png"
                         style="width: 100%">
                 </div>
             </div>
@@ -156,27 +156,27 @@
         <div class="col-lg-4 img-in">
                 <div class="pad-wrap">
                     <div class="imarg">
-                        <h4>Project 4</h4>
+                        <h4>Ben Jurin</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/IMG_4558-scaled.jpeg"
+                    <img src="http://personal.local/wp-content/uploads/2023/12/benjurin.png"
                         style="width: 100%">
                 </div>
             </div>
             <div class="col-lg-4 img-in">
                 <div class="pad-wrap">
                     <div class="imarg">
-                        <h4>Project 5</h4>
+                        <h4>Eat Lean</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/IMG_4558-scaled.jpeg"
+                    <img src="http://personal.local/wp-content/uploads/2023/12/eatlean.png"
                         style="width: 100%">
                 </div>
             </div>
             <div class="col-lg-4 img-in">
                 <div class="pad-wrap">
                     <div class="imarg">
-                        <h4>Project 6</h4>
+                        <h4>Chi Yip Group</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/IMG_4558-scaled.jpeg"
+                    <img src="http://personal.local/wp-content/uploads/2023/12/cyg.png"
                         style="width: 100%">
                 </div>
             </div>
