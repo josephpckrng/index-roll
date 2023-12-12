@@ -177,23 +177,37 @@
 
         </div>
     </section>
-
+    <div id="trigger7"></div>
     <section class="resources container" style="padding: 50px 0;">
         <h2>Resources</h2>
         <div class="list-wrapper">
-            <ul>
-                <li>
+            <ul id="target7">
+                <li id="item1">
+                    <a href="#">ACF</a>
+                </li>
+                <li id="item2">
                     <a href="#">Scroll Magic</a>
                 </li>
-                <li>
+                <li id="item3">
                     <a href="#">Lottie Interactivity</a>
                 </li>
-                <li>
-                    <a href="#">BootStrap</a>
+                <li id="item4">
+                    <a href="#">Bootstrap</a>
+                </li>
+                <li id="item5">
+                    <a href="#">jQuery</a>
+                </li>
+                <li id="item6">
+                    <a href="#">WordPress</a>
+                </li>
+                <li id="item7">
+                    <a href="#">PrismJS</a>
                 </li>
             </ul>
         </div>
     </section>
+
+    
 
     <script>
         const player = document.getElementById("firstLottie");

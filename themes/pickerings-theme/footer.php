@@ -154,6 +154,7 @@ images.forEach(image => {
     var tween4 = TweenMax.to("#target1", 0.5, { css: { right: "0", opacity: "1" }, ease: Linear.easeNone });
     var tween5 = TweenMax.to("#target5", 0.5, { css: { top: "0", opacity: "1", filter: "saturate(1)" }, ease: Linear.easeNone });
     var tween6 = TweenMax.to("#target6", 0.5, { css: { maxHeight: "600px" }, ease: Linear.easeNone });
+    var tween7 = TweenMax.to("#target7 li", 0.5, { css: { left: "0", opacity: "1" }, ease: Linear.easeNone });
     // build scene
     var scene = new ScrollMagic.Scene({ triggerElement: "#trigger", duration: 150, offset: 200 })
         .setTween(tween)
@@ -183,6 +184,11 @@ images.forEach(image => {
 
     var scene6 = new ScrollMagic.Scene({ triggerElement: "#trigger6", duration: 250, offset: 700 })
         .setTween(tween6)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+        var scene6 = new ScrollMagic.Scene({ triggerElement: "#trigger7", duration: 50, offset: 0 })
+        .setTween(tween7)
         .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 </script>

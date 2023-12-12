@@ -49,5 +49,8 @@ header {
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
         border-radius: 20px;
     }
+    .hamburger {
+        padding-right: 0 !important;
+    }
 }
 
