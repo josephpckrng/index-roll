@@ -113,10 +113,10 @@
         </div>
     </section>
 
-   
+
 
     <section class="gallery container" style="padding: 50px 0">
-    <div class="text-only-container">
+        <div class="text-only-container">
             <h2>Projects</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
@@ -126,8 +126,7 @@
                     <div class="imarg">
                         <h4>Arvia Technology</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/arvia.png"
-                        style="width: 100%">
+                    <img src="http://personal.local/wp-content/uploads/2023/12/arvia.png" style="width: 100%">
                 </div>
             </div>
             <div class="col-lg-4 img-in">
@@ -135,8 +134,7 @@
                     <div class="imarg">
                         <h4>AI UK 2023</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/aiuk232.png"
-                        style="width: 100%">
+                    <img src="http://personal.local/wp-content/uploads/2023/12/aiuk232.png" style="width: 100%">
                 </div>
             </div>
             <div class="col-lg-4 img-in">
@@ -144,8 +142,7 @@
                     <div class="imarg">
                         <h4>Analogue Revival</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/analiogg.png"
-                        style="width: 100%">
+                    <img src="http://personal.local/wp-content/uploads/2023/12/analiogg.png" style="width: 100%">
                 </div>
             </div>
         </div>
@@ -153,13 +150,12 @@
 
         </div>
         <div class="row">
-        <div class="col-lg-4 img-in">
+            <div class="col-lg-4 img-in">
                 <div class="pad-wrap">
                     <div class="imarg">
                         <h4>Ben Jurin</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/benjurin.png"
-                        style="width: 100%">
+                    <img src="http://personal.local/wp-content/uploads/2023/12/benjurin.png" style="width: 100%">
                 </div>
             </div>
             <div class="col-lg-4 img-in">
@@ -167,8 +163,7 @@
                     <div class="imarg">
                         <h4>Eat Lean</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/eatlean.png"
-                        style="width: 100%">
+                    <img src="http://personal.local/wp-content/uploads/2023/12/eatlean.png" style="width: 100%">
                 </div>
             </div>
             <div class="col-lg-4 img-in">
@@ -176,11 +171,27 @@
                     <div class="imarg">
                         <h4>Chi Yip Group</h4>
                     </div>
-                    <img src="http://personal.local/wp-content/uploads/2023/12/cyg.png"
-                        style="width: 100%">
+                    <img src="http://personal.local/wp-content/uploads/2023/12/cyg.png" style="width: 100%">
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section class="resources container" style="padding: 50px 0;">
+        <h2>Resources</h2>
+        <div class="list-wrapper">
+            <ul>
+                <li>
+                    <a href="#">Scroll Magic</a>
+                </li>
+                <li>
+                    <a href="#">Lottie Interactivity</a>
+                </li>
+                <li>
+                    <a href="#">BootStrap</a>
+                </li>
+            </ul>
         </div>
     </section>
 
