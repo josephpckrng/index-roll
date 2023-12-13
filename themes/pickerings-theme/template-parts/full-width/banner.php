@@ -206,9 +206,34 @@
             </ul>
         </div>
     </section>
+    <section class="container">
+    <pre>
+    <code class="language-js line-numbers"> 
+       
+    function updateText() {
+        // Ensure the new index is different from the previous one
+        var randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * words.length);
+        } while (randomIndex === lastIndex);
 
-    
+        lastIndex = randomIndex;
 
+        // Apply fade-out effect
+        changingTextElement.style.opacity = 0.2;
+
+        // Update text content after the fade-out
+        setTimeout(function () {
+            changingTextElement.textContent = words[randomIndex];
+
+            // Apply fade-in effect
+            changingTextElement.style.opacity = 1;
+        }, 500); // 500 milliseconds (0.5 seconds) matches the transition duration in CSS
+    }
+    </code>
+    </pre>
+    </section>
+   
     <script>
         const player = document.getElementById("firstLottie");
 

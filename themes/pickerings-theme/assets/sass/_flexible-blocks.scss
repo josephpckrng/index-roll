@@ -181,33 +181,43 @@
 }
 
 section {
+    .token.operator {
+        background: none !important;
+    }
     &.resources {
-        #target7{
+        #target7 {
             li {
                 opacity: 0;
                 left: -100px;
                 position: relative;
                 transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.5s;
             }
+
             #item2 {
                 transition-delay: 0.5s;
-            } 
+            }
+
             #item3 {
                 transition-delay: 1s;
             }
+
             #item4 {
                 transition-delay: 1.5s;
             }
+
             #item5 {
                 transition-delay: 2s;
             }
+
             #item6 {
                 transition-delay: 2.5s;
             }
+
             #item7 {
                 transition-delay: 2.55s;
             }
         }
+
         ul {
             list-style: none;
             padding: 0;
@@ -215,7 +225,12 @@ section {
 
             li {
                 padding: 25px 0;
-                border-bottom: 2px solid #c7c7c7;
+                border-bottom: 2px solid #212529b5;
+                opacity: 0.5;
+
+                &:hover {
+                  cursor: pointer;
+                }
 
                 a {
                     text-decoration: none;

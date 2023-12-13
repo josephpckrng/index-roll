@@ -177,6 +177,9 @@
      object-fit: cover;
 }
 
+section .token.operator {
+  background: none !important;
+}
 section.resources #target7 li {
   opacity: 0;
   left: -100px;
@@ -208,7 +211,11 @@ section.resources ul {
 }
 section.resources ul li {
   padding: 25px 0;
-  border-bottom: 2px solid #c7c7c7;
+  border-bottom: 2px solid rgba(33, 37, 41, 0.7098039216);
+  opacity: 0.5;
+}
+section.resources ul li:hover {
+  cursor: pointer;
 }
 section.resources ul li a {
   text-decoration: none;
