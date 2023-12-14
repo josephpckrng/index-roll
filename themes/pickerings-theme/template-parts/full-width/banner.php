@@ -206,9 +206,33 @@
             </ul>
         </div>
     </section>
-    <section class="container">
-    <pre>
-    <code class="language-js line-numbers"> 
+
+
+
+    <section class="container" style="padding: 50px 0">
+        <h2>Code Snippets</h2>
+        <div class="snippet-selector">
+            <ul class="d-flex">
+                <li data-target="wrap-one">
+                    <a href="">Text shuffle</a>
+                </li>
+                <li data-target="wrap-two">
+                    <a href="">Lottie Interactivity</a>
+                </li>
+                <li>
+                    <a href="">Scroll Magic</a>
+                </li>
+                <li>
+                    <a href="">SVG animation</a>
+                </li>
+                <li>
+                    <a href="">Image hover & follow</a>
+                </li>
+            </ul>
+        </div>
+        <div class="code-wrapper" id="wrap-one">
+            <pre class="language-js line-numbers" data-dependencies="markup,css!">
+    <code> 
        
     function updateText() {
         // Ensure the new index is different from the previous one
@@ -232,8 +256,37 @@
     }
     </code>
     </pre>
+        </div>
+        <div class="code-wrapper" id="wrap-two">
+            <pre class="language-js line-numbers" data-dependencies="markup,css!">
+    <code> 
+       
+    function updateText() {
+        // Ensure the new index is different from the previous one
+        var randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * words.length);
+        } while (randomIndex === lastIndex);
+
+        lastIndex = randomIndex;
+
+        // Apply fade-out effect
+        changingTextElement.style.opacity = 0.2;
+
+        // Update text content after the fade-out
+        setTimeout(function () {
+            changingTextElement.textContent = words[randomIndex];
+
+            // Apply fade-in effect
+            changingTextElement.style.opacity = 1;
+        }, 500); // 500 milliseconds (0.5 seconds) matches the transition duration in CSS
+    }
+    </code>
+    </pre>
+        </div>
+
     </section>
-   
+
     <script>
         const player = document.getElementById("firstLottie");
 

@@ -17,11 +17,9 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-coldark-dark.min.css">
-
 <!-- Then include Lottie Interactivity script -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+
 <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -31,7 +29,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.velocity.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-ubuHdiuTZbeDXbtuiioCEPPEs8NjzmCdnJiUhvybfjD3vlRBEY4A0hikuk8wCXkC0ptswEG0Lrvk81jS5MPU5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js" integrity="sha512-kz6zXmnIjbpj0erCwTJNPR96/pLY5s6V9iQkxhoN0hXBQcsMYhU6v/rJOEIOg50PXd6mZuWrz1sN44X0iQkV4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+
+document.querySelectorAll('.snippet-selector li').forEach(item => {
+    item.addEventListener('click', function(event) {
+        // Prevent the default action of the anchor tag
+        event.preventDefault();
+
+        // Get the ID of the target wrapper
+        const targetId = this.getAttribute('data-target');
+        
+        // Hide all code wrappers first
+        document.querySelectorAll('.code-wrapper').forEach(wrapper => {
+            wrapper.style.visibility = 'hidden';
+            wrapper.style.height = '0';
+        });
+
+        // Then make the targeted one visible
+        const codeWrapper = document.getElementById(targetId);
+        codeWrapper.style.visibility = "visible";
+    });
+});
+
 const images = document.querySelectorAll('.img-in');
 
 const observer = new IntersectionObserver(entries => {

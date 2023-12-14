@@ -181,8 +181,13 @@
 }
 
 section {
-    .token.operator {
-        background: none !important;
+   
+  
+        pre {
+            border-radius: 5px !important;
+            .token.operator {
+                background: none !important;
+        }
     }
     &.resources {
         #target7 {

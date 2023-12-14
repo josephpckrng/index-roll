@@ -12,7 +12,6 @@
 https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css
 " rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/atom-dark.min.css">
     <?php wp_head(); ?>
 </head>
 
