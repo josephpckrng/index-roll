@@ -24,6 +24,8 @@
     </div>
 </section>
 
+<!-- Scrolling text section -->
+
 <section style="height: 100vh">
     <div id="trigger4"></div>
     <div class="banner-attachment container">
@@ -64,8 +66,10 @@
     </div>
 
     </div>
-    <!-- SM trigger -->
+
     <div id="trigger"></div>
+
+    <!-- Image / GIF section -->
 
     <section style="padding-top: 50px; padding-bottom: 50px" class="container">
         <div id="target3" class="spacer s0">
@@ -86,6 +90,8 @@
             </div>
         </div>
     </section>
+
+    <!-- About me section -->
 
     <section>
         <div id="trigger5"></div>
@@ -113,7 +119,7 @@
         </div>
     </section>
 
-
+    <!-- Gallery Section -->
 
     <section class="gallery container" style="padding: 50px 0">
         <div class="text-only-container">
@@ -146,9 +152,6 @@
                 </div>
             </div>
         </div>
-
-
-        </div>
         <div class="row">
             <div class="col-lg-4 img-in">
                 <div class="pad-wrap">
@@ -178,6 +181,9 @@
         </div>
     </section>
     <div id="trigger7"></div>
+
+    <!-- Resources section -->
+
     <section class="resources container" style="padding: 50px 0;">
         <h2>Resources</h2>
         <div class="list-wrapper">
@@ -207,7 +213,7 @@
         </div>
     </section>
 
-
+    <!-- Code snippets section -->
 
     <section class="container" style="padding: 50px 0">
         <h2>Code Snippets</h2>
@@ -219,10 +225,10 @@
                 <li data-target="wrap-two">
                     <a href="">Lottie Interactivity</a>
                 </li>
-                <li>
+                <li data-target="wrap-three">
                     <a href="">Scroll Magic</a>
                 </li>
-                <li>
+                <li data-target="wrap-four">
                     <a href="">SVG animation</a>
                 </li>
                 <li>
@@ -261,30 +267,209 @@
             <pre class="language-js line-numbers" data-dependencies="markup,css!">
     <code> 
        
-    function updateText() {
-        // Ensure the new index is different from the previous one
-        var randomIndex;
-        do {
-            randomIndex = Math.floor(Math.random() * words.length);
-        } while (randomIndex === lastIndex);
+    const player = document.getElementById("firstLottie");
 
-        lastIndex = randomIndex;
+        player.addEventListener("ready", () => {
+            LottieInteractivity.create({
+                player: '#firstLottie',
+                mode: "scroll",
+                actions: [
+                    {
+                        visibility: [0, 1.0],
+                        type: "play"
+                    }
+                ]
+            });
+            var player = document.getElementById("Lottie");
+            LottieInteractivity.create({
+                player: '#Lottie',
+                mode: 'scroll',
+                actions: [
+                    {
+                        visibility: [0, 1],
+                        type: 'seek',
+                        frames: [0, 104],
+                    },
+                ]
+            });
+            var player = document.getElementById("LottieThree");
+            LottieInteractivity.create({
+                player: "#LottieThree",
+                mode: 'scroll',
+                actions: [
+                    {
+                        visibility: [0, 1],
+                        type: 'seek',
+                        frames: [0, 204],
+                    },
 
-        // Apply fade-out effect
-        changingTextElement.style.opacity = 0.2;
-
-        // Update text content after the fade-out
-        setTimeout(function () {
-            changingTextElement.textContent = words[randomIndex];
-
-            // Apply fade-in effect
-            changingTextElement.style.opacity = 1;
-        }, 500); // 500 milliseconds (0.5 seconds) matches the transition duration in CSS
-    }
+                ]
+            });
+        });
+        
     </code>
     </pre>
         </div>
 
+        <div class="code-wrapper" id="wrap-three">
+            <pre class="language-js line-numbers" data-dependencies="markup,css!">
+    <code> 
+       
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // create a scene
+    new ScrollMagic.Scene({
+        triggerElement: '#point1',
+        duration: 1000, // the scene should last for a scroll distance of 1000px
+        offset: 0, // start this scene after scrolling for 50px
+        reverse: true
+    })
+        .setPin('#point1') // pins the element for the scene's duration
+        .setClassToggle('#point1', 'fade-in')
+
+        .addTo(controller) // assign the scene to the controller
+        .addIndicators();
+
+    new ScrollMagic.Scene({
+        triggerElement: '#point2',
+        duration: 1000, // the scene should last for a scroll distance of 1000px
+        offset: 0, // start this scene after scrolling for 50px
+
+    })
+        .setPin('#point2') // pins the element for the scene's duration
+        .setClassToggle('#thanks', 'fade-in')
+
+        .addTo(controller) // assign the scene to the controller
+        .addIndicators();
+
+
+    new ScrollMagic.Scene({
+        triggerElement: '#point3',
+        duration: 1000, // the scene should last for a scroll distance of 1000px
+        offset: 0, // start this scene after scrolling for 50px
+
+    })
+        .setPin('#point3') // pins the element for the scene's duration
+        .setClassToggle('#howdy', 'fade-in')
+
+        .addTo(controller) // assign the scene to the controller
+        .addIndicators();
+
+    new ScrollMagic.Scene({
+        triggerElement: '#point4',
+        duration: 0, // the scene should last for a scroll distance of 1000px
+        offset: 50, // start this scene after scrolling for 50px
+
+    })
+        .setPin('#point4') // pins the element for the scene's duration
+        .setClassToggle('.about-me-text', 'fade-in')
+
+        .addTo(controller) // assign the scene to the controller
+        .addIndicators();
+
+
+    new ScrollMagic.Scene({
+        triggerElement: '#point6',
+        duration: 0, // the scene should last for a scroll distance of 1000px
+        offset: -50, // start this scene after scrolling for 50px
+
+    })
+        .setPin('#point6') // pins the element for the scene's duration
+        .setClassToggle('.fly-right', 'fly-right-in')
+
+        .addTo(controller) // assign the scene to the controller
+        .addIndicators();
+
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // build tween
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // build tween
+    var tween = TweenMax.to("#target3", 0.5, { css: { maxWidth: "100%" }, ease: Linear.easeNone });
+    var tween2 = TweenMax.to("#target4", 0.5, { css: { maxHeight: "450px" }, ease: Linear.easeNone });
+    var tween3 = TweenMax.to("#target2", 0.5, { css: { left: "0", opacity: "1" }, ease: Linear.easeNone });
+    var tween4 = TweenMax.to("#target1", 0.5, { css: { right: "0", opacity: "1" }, ease: Linear.easeNone });
+    var tween5 = TweenMax.to("#target5", 0.5, { css: { top: "0", opacity: "1", filter: "saturate(1)" }, ease: Linear.easeNone });
+    var tween6 = TweenMax.to("#target6", 0.5, { css: { maxHeight: "600px" }, ease: Linear.easeNone });
+    var tween7 = TweenMax.to("#target7 li", 0.5, { css: { left: "0", opacity: "1" }, ease: Linear.easeNone });
+    // build scene
+    var scene = new ScrollMagic.Scene({ triggerElement: "#trigger", duration: 150, offset: 200 })
+        .setTween(tween)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+    var scene2 = new ScrollMagic.Scene({ triggerElement: "#trigger2", duration: 300, offset: 0 })
+        .setTween(tween2)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+    var scene3 = new ScrollMagic.Scene({ triggerElement: "#trigger3", duration: 500, offset: -300 })
+        .setTween(tween3)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+    var scene4 = new ScrollMagic.Scene({ triggerElement: "#trigger4", duration: 200, offset: -150 })
+        .setTween(tween4)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+    var scene5 = new ScrollMagic.Scene({ triggerElement: "#trigger5", duration: 200, offset: 100 })
+        .setTween(tween5)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+
+    var scene6 = new ScrollMagic.Scene({ triggerElement: "#trigger6", duration: 250, offset: 700 })
+        .setTween(tween6)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+        var scene6 = new ScrollMagic.Scene({ triggerElement: "#trigger7", duration: 50, offset: 0 })
+        .setTween(tween7)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+    </code>
+    </pre>
+        </div>
+
+        <div class="code-wrapper" id="wrap-four">
+            <pre class="language-js line-numbers" data-dependencies="markup,css!">
+    <code> 
+       
+    document.addEventListener('DOMContentLoaded', function () {
+            const svgElement = document.getElementById('Layer_1'); // Replace 'your-svg-id' with the actual ID of your SVG element
+            const pPath = document.getElementById('p'); // Replace 'p' with the actual ID of your #p path
+
+            if (svgElement && pPath) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY === 0) {
+                        svgElement.classList.remove('hidden');
+                        pPath.style.transform = 'translateX(0)';
+                    } else {
+                        svgElement.classList.add('hidden');
+                        pPath.style.transform = 'translateX(-100px)';
+                    }
+                });
+            } else {
+                console.error('SVG element or #p path not found.');
+            }
+        });
+
+        // Look for .hamburger
+        var hamburger = document.querySelector(".hamburger");
+        // On click
+        hamburger.addEventListener("click", function () {
+            // Toggle class "is-active"
+            hamburger.classList.toggle("is-active");
+            // Do something else, like open/close menu
+        });
+    </code>
+    </pre>
+        </div>
     </section>
 
     <script>
