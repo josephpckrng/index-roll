@@ -162,6 +162,18 @@ images.forEach(image => {
         .addTo(controller) // assign the scene to the controller
         .addIndicators();
 
+        new ScrollMagic.Scene({
+        triggerElement: '#point7',
+        duration: 0, // the scene should last for a scroll distance of 1000px
+        offset: 50, // start this scene after scrolling for 50px
+
+    })
+        .setPin('#point7') // pins the element for the scene's duration
+        .setClassToggle('.fly-right-out', 'fly-right-over')
+
+        .addTo(controller) // assign the scene to the controller
+        .addIndicators();
+
     // init controller
     var controller = new ScrollMagic.Controller();
 

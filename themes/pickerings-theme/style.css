@@ -87,6 +87,15 @@ section #wrap-one {
   margin-right: 0 !important;
 }
 
+.fly-right-out {
+  position: relative !important;
+  right: -100vw !important;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.35s;
+}
+.fly-right-out.fly-right-over {
+  right: 0 !important;
+}
+
 .col-lg-8 {
   overflow: hidden;
 }
