@@ -12,6 +12,12 @@ function enqueue_style_scripts() {
     wp_enqueue_style('style', get_stylesheet_uri());
 }
 
+function my_enqueue_scripts() {
+    // Enqueue your custom scripts.js file
+    wp_enqueue_script('my-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), null, true);
+}
+
+add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 
 
 

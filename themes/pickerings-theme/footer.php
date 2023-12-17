@@ -29,72 +29,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.velocity.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-ubuHdiuTZbeDXbtuiioCEPPEs8NjzmCdnJiUhvybfjD3vlRBEY4A0hikuk8wCXkC0ptswEG0Lrvk81jS5MPU5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js" integrity="sha512-kz6zXmnIjbpj0erCwTJNPR96/pLY5s6V9iQkxhoN0hXBQcsMYhU6v/rJOEIOg50PXd6mZuWrz1sN44X0iQkV4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"
+    integrity="sha512-ubuHdiuTZbeDXbtuiioCEPPEs8NjzmCdnJiUhvybfjD3vlRBEY4A0hikuk8wCXkC0ptswEG0Lrvk81jS5MPU5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"
+    integrity="sha512-kz6zXmnIjbpj0erCwTJNPR96/pLY5s6V9iQkxhoN0hXBQcsMYhU6v/rJOEIOg50PXd6mZuWrz1sN44X0iQkV4A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- ScrollMagic -->
+
 <script>
-
-document.querySelectorAll('.snippet-selector li').forEach(item => {
-    item.addEventListener('click', function(event) {
-        // Prevent the default action of the anchor tag
-        event.preventDefault();
-
-        // Get the ID of the target wrapper
-        const targetId = this.getAttribute('data-target');
-        
-        // Hide all code wrappers first
-        document.querySelectorAll('.code-wrapper').forEach(wrapper => {
-            wrapper.style.visibility = 'hidden';
-            wrapper.style.height = '0';
-        });
-
-        // Then make the targeted one visible
-        const codeWrapper = document.getElementById(targetId);
-        codeWrapper.style.visibility = "visible";
-    });
-});
-
-const images = document.querySelectorAll('.img-in');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        } else {
-            entry.target.classList.remove('active');
-        }
-    });
-}, { threshold: 0.5 });
-
-images.forEach(image => {
-    observer.observe(image);
-});
-
-    var words = ["Responsive", "Efficient", "Secure", "Interactive", "Scalable", "User-friendly", "Optimized", "Intuitive", "Robust", "Dynamic"];
-    var changingTextElement = document.getElementById("changingText");
-    var lastIndex;
-
-    function updateText() {
-        // Ensure the new index is different from the previous one
-        var randomIndex;
-        do {
-            randomIndex = Math.floor(Math.random() * words.length);
-        } while (randomIndex === lastIndex);
-
-        lastIndex = randomIndex;
-
-        // Apply fade-out effect
-        changingTextElement.style.opacity = 0.2;
-
-        // Update text content after the fade-out
-        setTimeout(function () {
-            changingTextElement.textContent = words[randomIndex];
-
-            // Apply fade-in effect
-            changingTextElement.style.opacity = 1;
-        }, 500); // 500 milliseconds (0.5 seconds) matches the transition duration in CSS
-    }
-
-    setInterval(updateText, 2000);
 
     // init controller
     var controller = new ScrollMagic.Controller();
@@ -162,7 +106,7 @@ images.forEach(image => {
         .addTo(controller) // assign the scene to the controller
         .addIndicators();
 
-        new ScrollMagic.Scene({
+    new ScrollMagic.Scene({
         triggerElement: '#point7',
         duration: 0, // the scene should last for a scroll distance of 1000px
         offset: 50, // start this scene after scrolling for 50px
@@ -174,7 +118,7 @@ images.forEach(image => {
         .addTo(controller) // assign the scene to the controller
         .addIndicators();
 
-        new ScrollMagic.Scene({
+    new ScrollMagic.Scene({
         triggerElement: '#point7',
         duration: 0, // the scene should last for a scroll distance of 1000px
         offset: 50, // start this scene after scrolling for 50px
@@ -185,6 +129,34 @@ images.forEach(image => {
 
         .addTo(controller) // assign the scene to the controller
         .addIndicators();
+
+    new ScrollMagic.Scene({ triggerElement: '#listTriggerOne', offset: 0 })
+        .setTween('#item1', 1, { x: '0%' }) // animate from left
+        .addTo(controller);
+
+    new ScrollMagic.Scene({ triggerElement: '#listTriggerTwo', offset: 0 })
+        .setTween('#item2', 1, { x: '0%' }) // animate from right
+        .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: '#listTriggerThree', offset: 0 })
+        .setTween('#item3', 1, { x: '0%' }) // animate from left
+        .addTo(controller);
+
+    new ScrollMagic.Scene({ triggerElement: '#listTriggerFour', offset: 0 })
+        .setTween('#item4', 1, { x: '0%' }) // animate from right
+        .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: '#listTriggerFive', offset: 0 })
+        .setTween('#item5', 1, { x: '0%' }) // animate from right
+        .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: '#listTriggerSix', offset: 0 })
+        .setTween('#item6', 1, { x: '0%' }) // animate from left
+        .addTo(controller);
+
+    new ScrollMagic.Scene({ triggerElement: '#listTriggerSeven', offset: 0 })
+        .setTween('#item7', 1, { x: '0%' }) // animate from right
+        .addTo(controller);
 
 
     // init controller
@@ -234,10 +206,11 @@ images.forEach(image => {
         .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
-        var scene6 = new ScrollMagic.Scene({ triggerElement: "#trigger7", duration: 50, offset: 0 })
+    var scene6 = new ScrollMagic.Scene({ triggerElement: "#trigger7", duration: 50, offset: 0 })
         .setTween(tween7)
         .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
+
 </script>
 </body>
 

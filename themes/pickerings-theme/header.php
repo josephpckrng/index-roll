@@ -65,35 +65,3 @@ https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css
         </div>
     </header>
 
-
-    <script>
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const svgElement = document.getElementById('Layer_1'); // Replace 'your-svg-id' with the actual ID of your SVG element
-            const pPath = document.getElementById('p'); // Replace 'p' with the actual ID of your #p path
-
-            if (svgElement && pPath) {
-                window.addEventListener('scroll', function () {
-                    if (window.scrollY === 0) {
-                        svgElement.classList.remove('hidden');
-                        pPath.style.transform = 'translateX(0)';
-                    } else {
-                        svgElement.classList.add('hidden');
-                        pPath.style.transform = 'translateX(-100px)';
-                    }
-                });
-            } else {
-                console.error('SVG element or #p path not found.');
-            }
-        });
-
-        // Look for .hamburger
-        var hamburger = document.querySelector(".hamburger");
-        // On click
-        hamburger.addEventListener("click", function () {
-            // Toggle class "is-active"
-            hamburger.classList.toggle("is-active");
-            // Do something else, like open/close menu
-        });
-    </script>

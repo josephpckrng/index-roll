@@ -180,7 +180,7 @@
 
         </div>
     </section>
-    <div id="trigger7"></div>
+    <!-- <div id="trigger7"></div> ** not in use -->
 
     <!-- Resources section -->
 
@@ -188,24 +188,31 @@
         <h2>Resources</h2>
         <div class="list-wrapper">
             <ul id="target7">
+                <div id="listTriggerOne"></div>
                 <li id="item1">
                     <a href="#">ACF</a>
                 </li>
+                <div id="listTriggerTwo"></div>
                 <li id="item2">
                     <a href="#">Scroll Magic</a>
                 </li>
+                <div id="listTriggerThree"></div>
                 <li id="item3">
                     <a href="#">Lottie Interactivity</a>
                 </li>
+                <div id="listTriggerFour"></div>
                 <li id="item4">
                     <a href="#">Bootstrap</a>
                 </li>
+                <div id="listTriggerFive"></div>
                 <li id="item5">
                     <a href="#">jQuery</a>
                 </li>
+                <div id="listTriggerSix"></div>
                 <li id="item6">
                     <a href="#">WordPress</a>
                 </li>
+                <div id="listTriggerSeven"></div>
                 <li id="item7">
                     <a href="#">PrismJS</a>
                 </li>
