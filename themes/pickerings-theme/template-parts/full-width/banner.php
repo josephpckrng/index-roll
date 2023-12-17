@@ -216,7 +216,10 @@
     <!-- Code snippets section -->
     <div id="point7"></div>
     <section class="container" style="padding: 50px 0">
-        <h2>Code Snippets</h2>
+        <div class="fly-left-out">
+            <h2>Code Snippets</h2>
+        </div>
+
         <div class="fly-right-out">
             <div class="snippet-selector">
                 <ul class="d-flex">
@@ -238,9 +241,9 @@
                 </ul>
             </div>
         </div>
-
-        <div class="code-wrapper" id="wrap-one">
-            <pre class="language-js line-numbers" data-dependencies="markup,css!">
+        <div class="fly-left-out">
+            <div class="code-wrapper" id="wrap-one">
+                <pre class="language-js line-numbers" data-dependencies="markup,css!">
     <code> 
        
     function updateText() {
@@ -265,9 +268,9 @@
     }
     </code>
     </pre>
-        </div>
-        <div class="code-wrapper" id="wrap-two">
-            <pre class="language-js line-numbers" data-dependencies="markup,css!">
+            </div>
+            <div class="code-wrapper" id="wrap-two">
+                <pre class="language-js line-numbers" data-dependencies="markup,css!">
     <code> 
        
     const player = document.getElementById("firstLottie");
@@ -312,10 +315,10 @@
         
     </code>
     </pre>
-        </div>
+            </div>
 
-        <div class="code-wrapper" id="wrap-three">
-            <pre class="language-js line-numbers" data-dependencies="markup,css!">
+            <div class="code-wrapper" id="wrap-three">
+                <pre class="language-js line-numbers" data-dependencies="markup,css!">
     <code> 
        
     // init controller
@@ -352,10 +355,10 @@
 
     </code>
     </pre>
-        </div>
+            </div>
 
-        <div class="code-wrapper" id="wrap-four">
-            <pre class="language-js line-numbers" data-dependencies="markup,css!">
+            <div class="code-wrapper" id="wrap-four">
+                <pre class="language-js line-numbers" data-dependencies="markup,css!">
     <code> 
        
     document.addEventListener('DOMContentLoaded', function () {
@@ -387,7 +390,9 @@
         });
     </code>
     </pre>
+            </div>
         </div>
+
     </section>
 
     <script>

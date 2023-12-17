@@ -90,10 +90,19 @@ section #wrap-one {
 .fly-right-out {
   position: relative !important;
   right: -100vw !important;
-  transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.35s;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.5s;
 }
 .fly-right-out.fly-right-over {
   right: 0 !important;
+}
+
+.fly-left-out {
+  position: relative !important;
+  left: -100vw !important;
+  transition: cubic-bezier(0.23, 1, 0.32, 1) all 0.5s;
+}
+.fly-left-out.fly-left-over {
+  left: 0 !important;
 }
 
 .col-lg-8 {
@@ -313,6 +322,12 @@ header .hamburger {
 
 html {
   overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+  }
 }
 
 * {
